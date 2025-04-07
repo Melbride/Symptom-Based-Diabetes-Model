@@ -48,7 +48,7 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # Header
-st.markdown("<h1 class='main-header'>Diabetes Prediction App</h1>", unsafe_allow_html=True)
+st.markdown("<h1 class='main-header'>Diabetes Detection App</h1>", unsafe_allow_html=True)
 st.markdown("This app analyzes diabetes symptoms data and predicts the likelihood of diabetes based on input parameters.")
 
 # Load data
@@ -274,7 +274,7 @@ def build_model(cleaned_df):
 
 # Function for prediction
 def make_prediction(model, feature_names):
-    st.markdown("<h2 class='sub-header'>🔮 Diabetes Prediction</h2>", unsafe_allow_html=True)
+    st.markdown("<h2 class='sub-header'>🔮 Diabetes Detection</h2>", unsafe_allow_html=True)
     st.write("Enter the patient's information to get a prediction:")
 
     col1, col2 = st.columns(2)
@@ -309,7 +309,7 @@ def make_prediction(model, feature_names):
                           polyphagia_val, irritability_val, partial_paresis_val]])
 
     # Prediction Button
-    if st.button("🔍 Predict Diabetes Stage"):
+    if st.button("🔍 Detect Diabetes Stage"):
         input_data = preprocess_inputs()
 
         if input_data is not None:
@@ -369,7 +369,7 @@ def make_prediction(model, feature_names):
                     st.write("- **Stay aware of diabetes symptoms and risk factors**.")
 
                 # Disclaimer
-                st.info("Disclaimer: This prediction is based on a machine learning model and should not be considered as medical advice. Always consult with a healthcare professional for proper diagnosis and treatment.")
+                st.info("Disclaimer: This detection results are based on a machine learning model and should not be considered as medical advice. Always consult with a healthcare professional for proper diagnosis and treatment.")
 # Information section
 def show_info():
     st.markdown("<h2 class='sub-header'>ℹ️ About Diabetes</h2>", unsafe_allow_html=True)
@@ -448,7 +448,7 @@ def main():
         st.markdown("<h1 class='main-header'>Welcome to the Diabetes Prediction App</h1>", unsafe_allow_html=True)
         
         st.write("""
-        This application uses machine learning to predict the likelihood of diabetes based on various symptoms and risk factors.
+        This application uses machine learning to detect the likelihood of diabetes based on various symptoms and risk factors.
         
         ### Features:
         - **Data Exploration**: Visualize and understand the diabetes symptoms dataset
