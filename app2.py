@@ -21,7 +21,7 @@ from collections import Counter
 
 # Set page config
 st.set_page_config(
-    page_title="Diabetes Symptoms Prediction",
+    page_title="Diabetes Symptoms Detection",
     page_icon="🩺",
     layout="wide",
     initial_sidebar_state="expanded"
@@ -49,7 +49,7 @@ st.markdown("""
 
 # Header
 st.markdown("<h1 class='main-header'>Diabetes Detection App</h1>", unsafe_allow_html=True)
-st.markdown("This app analyzes diabetes symptoms data and predicts the likelihood of diabetes based on input parameters.")
+st.markdown("This app analyzes diabetes symptoms data and detects the likelihood of diabetes based on input parameters.")
 
 # Load data
 @st.cache_data
@@ -275,7 +275,7 @@ def build_model(cleaned_df):
 # Function for prediction
 def make_prediction(model, feature_names):
     st.markdown("<h2 class='sub-header'>🔮 Diabetes Detection</h2>", unsafe_allow_html=True)
-    st.write("Enter the patient's information to get a prediction:")
+    st.write("Please enter the patient's information to detect the likelihood of diabetes:")
 
     col1, col2 = st.columns(2)
 
@@ -369,7 +369,7 @@ def make_prediction(model, feature_names):
                     st.write("- **Stay aware of diabetes symptoms and risk factors**.")
 
                 # Disclaimer
-                st.info("Disclaimer: This detection results are based on a machine learning model and should not be considered as medical advice. Always consult with a healthcare professional for proper diagnosis and treatment.")
+                st.info("Disclaimer: These detection results are based on a machine learning model and should not be considered as medical advice. Always consult with a healthcare professional for proper diagnosis and treatment.")
 # Information section
 def show_info():
     st.markdown("<h2 class='sub-header'>ℹ️ About Diabetes</h2>", unsafe_allow_html=True)
@@ -445,10 +445,10 @@ def main():
     # Home page
     if page == "Home":
         st.image("https://img.icons8.com/color/96/000000/diabetes.png", width=150)
-        st.markdown("<h1 class='main-header'>Welcome to the Diabetes Prediction App</h1>", unsafe_allow_html=True)
+        st.markdown("<h1 class='main-header'>Welcome to the Diabetes Detection App</h1>", unsafe_allow_html=True)
         
         st.write("""
-        This application uses machine learning to detect the likelihood of diabetes based on various symptoms and risk factors.
+        This application utilizes machine learning to detect the likelihood of diabetes based on user-reported symptoms and associated risk factors
         
         ### Features:
         - **Data Exploration**: Visualize and understand the diabetes symptoms dataset
